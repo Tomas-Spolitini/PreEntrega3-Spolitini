@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NexusGames | Datos </title>
+        <link rel="icon" href="/images/logo.png">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="/css/styles.css">
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+    <body>
+      <header>
+        <nav class="navbar navbar-expand-lg navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+          <div class="container-fluid">
+            <a class="nav-item navbar-brand" href="/index.html">
+              <img class="logito" src="/images/logo2.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">                
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active navbar-brand" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     <i class="fa-solid fa-bars"></i> Categorias <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="/pages/tarjetadevideo.html"></i><i class="fa-solid fa-gamepad"></i> Tarjetas De Video</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="/pages/microprocesadores.html"><i class="fa-solid fa-microchip"></i> MicroProcesadores</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="/pages/armatupc.html"><i class="fa-solid fa-desktop"></i> Arma Tu PC</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active navbar-brand" aria-current="page" href="/pages/contacto.html"><i class="fa-solid fa-message"></i> Contacto</a>
+                </li>                
+    
+                <li class="nav-item">
+                  <a class="nav-link active navbar-brand" href="/pages/faq.html"><i class="fa-solid fa-circle-question"></i> FAQ</a>
+                </li>
+    
+                <li class="nav-item">
+                  <a class="nav-link  active navbar-brand" href="/pages/afiliados.html"><i class="fa-solid fa-fire"></i> Afiliados</a>
+                </li>
+              </ul>
+
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Proximamente." aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header> 
+        <section class="container120 forms">
+            <div class="form login">
+                <div class="form-content">
+                    <header>Iniciar Sesion</header>
+                    <form action="#">
+                        <div class="field input-field">
+                            <input type="email" placeholder="Correo Electronico" class="input">
+                        </div>
+
+                        <div class="field input-field">
+                            <input type="password" placeholder="Contraseña" class="password">
+                            <i class='bx bx-hide eye-icon'></i>
+                        </div>
+
+                        <div class="form-link">
+                            <a href="#" class="forgot-pass">¿Olvidaste Tu Contraseña?</a>
+                        </div>
+
+                        <div class="field button-field">
+                            <button onclick="Mostrar()">Iniciar Sesion</button>
+                        </div>
+                        <script>
+                          const Mostrar = () => {
+                            Swal.fire({
+                              title: '¿Estas Seguro?',
+                              text: "¡Esta Accion Es Irrevertible!",
+                              icon: 'warning',
+                              showCancelButton: true,
+                              confirmButtonColor: '#3085d6',
+                              cancelButtonColor: '#d33',
+                              confirmButtonText: 'Si, ¡Acepto!'
+                            }).then((result) => { 
+                              if (result.isConfirmed) {
+                                Swal.fire(
+                                  '¡Has Iniciado Sesion!',
+                                  'Has Iniciado Sesion Correctamente.',
+                                  'success'
+                                )
+                              }
+                            })
+                          }
+                        </script>
+
+                    </form>
+
+                    <div class="form-link">
+                        <span>¿No Tienes Cuenta? <a href="#" class="link signup-link">Registrate</a></span>
+                    </div>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="media-options">
+                    <a href="#" class="field facebook">
+                        <i class='bx bxl-facebook facebook-icon'></i>
+                        <span>Iniciar Sesion Con Facebook</span>
+                    </a>
+                </div>
+
+                <div class="media-options">
+                    <a href="#" class="field google">
+                        <img src="/images/google2.jpg" alt="" class="google-img">
+                        <span>Iniciar Sesion Con Google</span>
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- Signup Form -->
+
+            <div class="form signup">
+                <div class="form-content">
+                    <header>Registrate</header>
+                    <form action="#">
+                        <div class="field input-field">
+                            <input type="email" placeholder="Correo Electronico" class="input">
+                        </div>
+
+                        <div class="field input-field">
+                            <input type="password" placeholder="Crear Contraseña" class="password">
+                        </div>
+
+                        <div class="field input-field">
+                            <input type="password" placeholder="Confirmar Contraseña" class="password">
+                            <i class='bx bx-hide eye-icon'></i>
+                        </div>
+
+                        <div class="field button-field">
+                            <button onclick="Mostrar2()">Registrarte</button>
+                        </div>
+                        <script>
+                          const Mostrar2 = () => {
+                            Swal.fire({
+                              title: '¿Estas Seguro?',
+                              text: "¡Esta Accion Es Irrevertible!",
+                              icon: 'warning',
+                              showCancelButton: true,
+                              confirmButtonColor: '#3085d6',
+                              cancelButtonColor: '#d33',
+                              confirmButtonText: 'Si, ¡Acepto!'
+                            }).then((result) => { 
+                              if (result.isConfirmed) {
+                                Swal.fire(
+                                  '¡Te Has Registrado!',
+                                  'Te Has Registrado Correctamente.',
+                                  'success'
+                                )
+                              }
+                            })
+                          }
+                        </script>
+                    </form>
+
+                    <div class="form-link">
+                        <span>¿Ya tienes una cuenta? <a href="#" class="link login-link">Iniciar Sesion</a></span>
+                    </div>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="media-options">
+                    <a href="#" class="field facebook">
+                        <i class='bx bxl-facebook facebook-icon'></i>
+                        <span>Iniciar Sesion Con Facebook</span>
+                    </a>
+                </div>
+
+                <div class="media-options">
+                    <a href="#" class="field google">
+                        <img src="/images/google2.jpg" alt="" class="google-img">
+                        <span>Iniciar Sesion Con Google</span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- JavaScript -->
+        <script src="/js/main.js"></script>
+
+        <footer>
+          <div class="local">     
+            <strong>Nuestro Local:</strong> 
+            <br>   
+            <strong>Corrientes 950, Neuquen</strong>
+          </div>
+          <div class="maps">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d775.5464360582232!2d-68.05808971817572!3d-38.96542652089293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a322e459e9ac1%3A0xf83a5bd23a761244!2sCorrientes%20950%2C%20Q8304AAB%20Neuqu%C3%A9n!5e0!3m2!1ses!2sar!4v1690932942878!5m2!1ses!2sar" width="318" height="214" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+            </div>
+            <div class="metodospago">
+              <h2>Métodos de pago</h2>
+            </div>
+            <div class="imagen2">
+              <a href="https://www.visa.com.ar/visa-home-ar.html" target="_blank">
+                <img src="../images/visa.png" alt="visa" width="50" height="31">
+              </a>
+              <a href="https://www.paypal.com/ar/home" target="_blank">
+                <img src="../images/paypal.png" alt="visa" width="50" height="31">
+              </a>
+              <a href="https://www.mastercard.com.ar/es-ar.html" target="_blank">
+                <img src="../images/mastercard.png" alt="visa" width="50" height="31">
+              </a>
+              <a href="https://www.americanexpress.com/es-ar/" target="_blank">
+                <img src="../images/americanexpress.png" alt="visa" width="50" height="31">
+              </a>
+            </div>
+            <div>
+              <h3>NexusGames - Todos Los Derechos Reservados © 2023</h3>
+            </div>
+          </footer>
+        
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        
+    </body>
+</html>
