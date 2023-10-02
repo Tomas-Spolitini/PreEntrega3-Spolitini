@@ -708,6 +708,90 @@ body {
       background: #FFF;
     }
   }
+
+  @media screen and (min-width:767px) and (max-width:1023px){
+    .maps {
+      display: flex;
+      justify-content: center;
+    }
+    .local {
+      text-align: center;
+    }
+    .metodospago {
+      display: none;
+    }
+    .imagen2 {
+      display: none;
+    }
+    .peo {
+      display: none;
+    }
+    .pepe {
+      width: 480px;
+    }
+    .nombre {
+      margin-right: 900px;
+      width: 420px;
+    }
+    .nombre2 {
+      margin-right: 500px;
+    }
+    .btnContacto {
+      width: 420px;
+    }
+
+    .count-product {
+      display: none;
+  }
+
+  .cart {
+      display: none;
+  }
+
+  .btn-scrolltop {
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+    padding: 15px 20px;
+    background: blue;
+    color: white;
+    border: 1px solid white;
+    border-radius: 100%;
+    cursor: pointer;
+    transform: translateY(100px);
+    transition: 0.3s;
+  }
+  
+  .btn-scrolltop-on {
+    transform: translateY(0);
+  }
+  
+  .btn-scrolltop:hover {
+    background: #fff;
+    color: blue;
+    border: solid 2px #000;
+  }
+
+  .auris22 {
+    font-size: 50px;
+    width: 400px;
+    background: #000;
+    color: #fff;
+    padding: 30px;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 50px;
+  }
+
+  .form {
+    position: absolute;
+    width: 650px;
+    padding: 50px;
+    border-radius: 6px;
+    background: #FFF;
+  }
+    
+  }
   
   /*# sourceMappingURL=styles.css.map */
   

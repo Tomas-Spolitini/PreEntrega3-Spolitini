@@ -8,6 +8,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Foldit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 
 </head>
 
@@ -74,18 +78,93 @@
 
       <label for="email"><h3 class="nombre2">Correo Electronico</h3></label>
       <input class="nombre" type="email" name="email" id="email" placeholder="Coloca Tu Correo Aqui">
-      
+      <div class="center">
+        <div class="dropdown2">
+          <div class="title">Pais</div>
+          <div class="input-box"></div>
+          <div class="list">
+            <input type="radio" name="drop1" id="id11" class="radio" />
+            <label for="id11">
+              <span class="name">Argentina</span>
+            </label>
+    
+            <input type="radio" name="drop1" id="id12" class="radio" />
+            <label for="id12">
+              <span class="name">Chile</span>
+            </label>
+    
+            <input type="radio" name="drop1" id="id13" class="radio" />
+            <label for="id13">
+              <span class="name">Colombia</span>
+            </label>
+    
+            <input type="radio" name="drop1" id="id14" class="radio" />
+            <label for="id14">
+              <span class="name">España</span>
+            </label>
+    
+            <input type="radio" name="drop1" id="id15" class="radio" />
+            <label for="id15">
+              <span class="name">Venezuela</span>
+            </label>
+    
+            <input type="radio" name="drop1" id="id16" class="radio" />
+            <label for="id16">
+              <span class="name">Mexico</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <script>
+        var input = document.querySelector(".input-box");
+        input.onclick = function () {
+          this.classList.toggle("open");
+          let list = this.nextElementSibling;
+          if (list.style.maxHeight) {
+            list.style.maxHeight = null;
+            list.style.boxShadow = null;
+          } else {
+            list.style.maxHeight = list.scrollHeight + "px";
+            list.style.boxShadow =
+              "0 1px 2px 0 rgba(0, 0, 0, 0.15),0 1px 3px 1px rgba(0, 0, 0, 0.1)";
+          }
+        };
+    
+        var rad = document.querySelectorAll(".radio");
+        rad.forEach((item) => {
+          item.addEventListener("change", () => {
+            input.innerHTML = item.nextElementSibling.innerHTML;
+            input.click();
+          });
+        });
+    
+        var label = document.querySelectorAll("label");
+        function search(searchin) {
+          let searchVal = searchin.value;
+          searchVal = searchVal.toUpperCase();
+          label.forEach((item) => {
+            let checkVal = item.querySelector(".name").innerHTML;
+            checkVal = checkVal.toUpperCase();
+            if (checkVal.indexOf(searchVal) == -1) {
+              item.style.display = "none";
+            } else {
+              item.style.display = "flex";
+            }
+            let list = input.nextElementSibling;
+            list.style.maxHeight = list.scrollHeight + "px";
+          });
+        }
+      </script>
       <label for="area"><h3 class="nombre2">Comentario</h3></label>
       <textarea class="nombre" name="area" id="area" cols="30" rows="10" placeholder="Escriba Aqui Su Consulta"></textarea>
 
       <input class="btnContacto" type="submit">
-      <input class="btnContacto" type="reset">
-    </center>
+      <input class="btnContacto" type="reset">  
 
+    </center>
   </form>
 
-
-    <footer>
+  <footer>
       <div class="local">     
         <strong>Nuestro Local:</strong> 
         <br>   
