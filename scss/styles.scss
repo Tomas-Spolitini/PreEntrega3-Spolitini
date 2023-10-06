@@ -1,3 +1,11 @@
+// Variables
+$black: black;
+$strong: black;
+$center: center;
+$left: left;
+$right: right;
+
+
 body {
   font-family: system-ui;
   background-color: #232323;
@@ -9,7 +17,7 @@ body {
 
 .container {
   max-width: 1200px;
-  text-align: center;
+  text-align: $center;
   margin: auto;
 }
 
@@ -17,7 +25,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin: auto;
-  align-items: center;
+  align-items: $center;
   position: relative;
 }
 
@@ -35,7 +43,7 @@ body {
   color: red;
   font-weight: 700;
   font-family: system-ui;
-  line-height: 18px;
+  line-height: 10 + 8px;
 }
 
 .carts1 {
@@ -49,7 +57,7 @@ body {
 
 .cart {
   width: 50px;
-  height: 50px;
+  height: 25 + 25px;
   margin-right: -2300px;
   margin-top: -80px;
 }
@@ -80,7 +88,7 @@ body {
 
 .auris22 {
   font-size: 50px;
-  width: 500px;
+  width: 250 + 250px;
   background: #000;
   color: #fff;
   padding: 30px;
@@ -155,7 +163,7 @@ body {
 
 .cart-products .item {
   display: flex;
-  align-items: center;
+  align-items: $center;
   border-bottom: solid 2px red;
 }
 
@@ -174,7 +182,7 @@ body {
 .cart-products .item .item-content h6 {
   margin: 0;
   font-size: 13px;
-  font-weight: 400;
+  font-weight: 200 + 200px;
   font-family: system-ui;
 }
 
@@ -205,7 +213,7 @@ p.close-btn {
 
 p.author {
   display: flex;
-  justify-content: center;
+  justify-content: $center;
   FONT-VARIANT: JIS04;
   margin-top: 3%;
   gap: 7px;
